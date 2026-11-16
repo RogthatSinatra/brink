@@ -1,0 +1,129 @@
+{{>navbar}}
+{{>adrect}}
+
+<div class="container-fluid no-slider">
+    <div id="content" class="clearfix col-sm-12">
+        <div class="row news-post-wrapper">
+            <div id="main" class="col-md-12 col-sm-12 clearfix" role="main">
+            	{{#each article}}
+                <article id="post-187737" class="clearfix post-187737 post type-post status-publish format-standard has-post-thumbnail hentry category-news " role="article" itemscope itemtype="http://schema.org/newsPosting">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div class="post-header">
+                                <div class="meta">
+                                    <ul>
+                                        <li class="cat-parent"><a href="/kla" title="View all posts in News">News</a></li>
+                                        <li>{{this.date}}</li>
+                                    </ul>
+                                </div>
+                                <h1 class="post__title">{{this.title}}</h1> <img src="{{this.mainimage}}">
+                                <div class="lead-caption">
+                                    © HOWEE</div>
+                            </div>
+                            <!-- /21800390415/mpu_3 -->
+                            
+                            <section class="post_content clearfix" itemprop="articleBody">
+                                <div class="post-content-text col-sm-12">
+                                    <p class="lead">{{this.summary}}</p>
+                                    {{>adx}}
+                                    {{{this.body}}}
+                                    
+                                    <div class="closing-tag"></div>
+                                </div>
+                            </section> <!-- end article section -->
+                        </div>
+                        <div class="col-md-4 col-sm-12 sidebar-ads">
+                            <h5>ADVERTISEMENT</h5>
+                            <div class="ads-wrapper">
+                                <!-- /21800390415/half_page -->
+                          
+                                <!-- /21800390415/mpu_1 -->
+                                {{>adxx}}
+                                <!-- /21800390415/mpu_2 -->
+                                {{>adxxx}}
+                            </div>
+                        </div>
+                    </div>
+                </article> <!-- end article -->
+                {{/each}}
+            </div>
+        </div>
+        {{>follow}}
+        <br />
+        {{>adrect2}}
+    </div> <!-- end #content -->
+</div>
+<div class="container">
+    <div class="row more-from-uot">
+        <h3 style="background: #fff; margin-top: 35px;" class="full-width-header">More from U O T</h3>
+        <div class="col-md-12">
+            <div class="row" id='items'>
+                <!-- the loop -->
+       <template id='template'></template>
+         
+      
+            </div>
+            <div align="center"><p id="watch_end_of_document"></p>     
+          {{#paginate pagination type="next"}}
+          <form class="onlyfansx" method="post" autocomplete="off" role="form">
+          <div class="text-center mt-3">
+         <p class="mdl-spinner">Loading...</p>
+
+          </div>
+
+          <div class="mdl-spinner mdl-js-spinner is-active"></div>
+                  <span class="success-help">Loading More...</span>
+          
+          <input  type="text" hidden="true" value="{{n}}" name="pageNext" id="pageNext">
+        </form>
+        {{/paginate}}</div>
+         <br/><br/><br/>
+
+                           
+                                {{>phonead}}
+                         
+                   <br/><br/>
+        </div>
+    </div>
+</div>
+
+<style type="text/css">
+.post__title{
+    color:#000;
+}
+
+#loadmorex{
+    margin-top: 24px;
+    font-size: 14px;
+    color: white;
+    background-color: black;
+    width: 118px;
+    height: 35px;
+    text-align: center;
+    border-radius: 35px;
+}
+.wp-post-image{
+    object-fit: cover;
+    height: 300px;
+
+}
+        .success-help{
+  padding: 0 15px;
+  vertical-align: 0px;
+  display: none;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.mdl-spinner{
+  vertical-align: middle;
+  margin: 0px 10px; 
+  display: none;
+
+}
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script type="text/javascript" src="/js/loadnews.js"></script>
+<script async src="//www.instagram.com/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

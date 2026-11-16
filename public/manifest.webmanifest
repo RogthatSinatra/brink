@@ -1,0 +1,46 @@
+{
+  "name": "The Brink News",
+  "short_name": "Brink News",
+  "theme_color": "#f28421",
+  "background_color": "#242424",
+  "id": "/?utm_source=pwa&utm_medium=shortcut",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/",
+  "description": "Latest breaking news and videos",
+   "icons": [
+    {
+      "src": "/images/ss/icons-vector.svg",
+      "type": "image/svg+xml",
+      "sizes": "512x512"
+    },
+    {
+      "src": "/images/ss/icons-192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/images/ss/icons-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+      "screenshots": [
+     {
+      "src": "/images/ss/1.jpg",
+      "type": "image/jpg",
+      "sizes": "537x1053"
+    },
+    {
+      "src": "/images/ss/2.jpg",
+      "type": "image/jpg",
+      "sizes": "537x1053"
+    },
+    {
+      "src": "/images/ss/3.jpg",
+      "type": "image/jpg",
+      "sizes": "537x1053"
+    }
+  ]
+}

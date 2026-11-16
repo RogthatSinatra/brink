@@ -1,0 +1,211 @@
+{{>preload}}
+{{>navbar}}
+<style type="text/css">
+   .post-featured-image p.main-caption{
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 300;
+    margin-top: 15px;
+    color: #ccc; 
+}
+.theme-blog-details img.fr-fin{
+   width: 100% !important;
+   height: auto;
+}
+.theme-blog-details p a{
+    text-decoration: underline !important;
+}
+
+.theme-blog-details p span{
+    color: #fff !important;
+}
+</style>
+ <!-- tp-offcanvus-area-end -->
+ <div align="center"><a href="https://www.mtn.co.ug/momo/?utm_source=brink&utm_medium=banner&utm_campaign=brinknews" target="_blank"><img src="/ads/mtn/970X90.gif" width="90%"></a></div>
+            <div class="post-single-area mt-60">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 single-blog-content">
+                            <div class="post-single-wrapper">
+                                <div class="post-cat-box">
+                                    <a href="/c/{{article.category}}" class="activey">{{article.category}}</a>
+                                </div>
+                                <h1 class="post-title">
+                                    {{article.title}}
+                                </h1>
+                                <!-- <div class="blog-small-excerpt-box">
+                                    <p>{{trimString article.summary 200}}</p>
+                                </div> -->
+                                <div class="post-bottom-meta-list post-meta-wrapper">
+                                    <div class="post-left-details-meta">
+                                        <div class="post-meta-author-box">
+                                            By <a href="/a/{{hyphen article.author}}">{{hyphen article.author}}</a>
+                                        </div>
+                                        <div class="post-meta-date-box">
+                                           {{dateFormat article.date}}
+                                        </div>
+                                    </div>
+                                    <div class="post-meta-social">
+                                       Share  <a href="https://www.addtoany.com/share" class="a2a_dd"><i class="fal fa-share"></i></a>
+                                    </div>
+                                </div>
+                                <div class="post-featured-image">
+                                    <img src="{{article.mainimage}}" alt="{{article.title}}">
+                                    <p class="main-caption">{{article.credit}}</p>
+                                </div>
+                            </div>
+                            <div class="theme-blog-details">
+                                {{{article.body}}}
+                                <div class="author-bio-wrap">
+                                    <div class="author-thumbnail">
+                                        <a href="/a/{{hyphen article.author}}"><img class="lazy" data-src="/images/bio/{{hyphen article.author}}" alt="{{hyphen article.author}}"></a>
+                                    </div>
+                                    <div class="author-body">
+                                        <span class="subtitle">Author</span>
+                                        <h5 class="title">
+                                            {{hyphen article.author}}
+                                        </h5>
+                                        <!-- <p class="author-inner-text">My favorite compliment is being told that I look like my mom. Seeing myself in her image, like this daughter up top, makes me so proud of how far I’ve come.</p> -->
+                                       <!--  <div class="social-share-author">
+                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                                            <a href="#"><i class="fab fa-instagram"></i></a>
+                                            <a href="#"><i class="fab fa-twitter"></i></a>
+                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                        </div> -->
+                                    </div>
+                                </div>
+                 
+     
+                                          <div class="post-meta-social">
+                                            SHARE
+                                            <a href="https://www.addtoany.com/share" class="a2a_dd"><i class="fal fa-share"></i></a>
+                                        </div> 
+                       
+                        
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="sidebar blog-sidebar">
+                                <div class="section-title">
+                                    <h2 class="title-block">
+                                        Related
+                                    </h2>
+                                </div>
+                                {{#each similar}}
+                                <article class="post-block-style-wrapper post-block-template-two most-read-block-list">
+                                    <div class="post-block-style-inner post-block-list-style-inner">
+                                        <div class="post-block-media-wrap">
+                                            <a href="{{this.permalink}}">
+                                            <img class="lazy" data-src="{{this.mainimage}}" alt="{{this.title}}">
+                                            </a>
+                                        </div>
+                                        <div class="post-block-content-wrap">
+                                            <div class="post-item-title">
+                                                <h2 class="post-title">
+                                                    <a href="{{this.permalink}}">{{this.title}}</a>
+                                                </h2>
+                                            </div>
+                                            <div class="post-bottom-meta-list">
+                                                <div class="post-meta-date-box">
+                                                    {{dated this.date}}
+                                                    {{#if ...user}}<span>&nbsp;&nbsp;&nbsp;<a href="/posts/{{this._id}}/edit" title="Edit article"><i class="far fa-pencil"></i> Edit</a></span>
+                                                    {{/if}}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </article>
+                                {{/each}}
+                                  <div class="ads-image" align="center">
+                                <a href="https://www.mtn.co.ug/momo/?utm_source=brink&utm_medium=banner&utm_campaign=brinknews" target="_blank">
+                                <img class="lazy" data-src="/ads/mtn/300X250.gif">
+                                </a>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br/>
+            <div class="ads-image" align="center">
+                                <a href="https://www.mtn.co.ug/momo/?utm_source=brink&utm_medium=banner&utm_campaign=brinknews" target="_blank">
+                                <img class="lazy" data-src="/ads/mtn/MoMo Positioning_Socials-03.jpg" width="450">
+                                </a>
+                            </div>
+            <section class="popular-posts-column-area related-posts-wrapper mt-60 mb-50">
+                <div class="container">
+                    <div class="row">
+                        <div class="section-title">
+                            <h2 class="title-block">
+                                Latest
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        {{#each posts}}
+                        <div class="col-lg-4">
+                            <article class="post-block-style-wrapper post-block-template-one post-block-template-medium mb-24">
+                                <div class="post-block-style-inner">
+                                    <div class="post-block-media-wrap">
+                                        <a href="{{this.permalink}}">
+                                        <img class="lazy" data-src="{{this.mainimage}}" alt="{{this.title}}">
+                                        </a>
+                                    </div>
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="{{this.permalink}}">{{this.title}}</a>
+                                            </h2>
+                                        </div>
+                                       <!--  <div class="post-excerpt-box">
+                                            <p>In Teaching White Supremacy, Donald Yacovone traces how the writing</p>
+                                        </div> -->
+                                        <div class="post-bottom-meta-list">
+                                            <!-- <div class="post-meta-author-box">
+                                                By <a href="#">Laura Tanenbaum</a>
+                                            </div> -->
+                                            <div class="post-meta-date-box">
+                                                {{dateFormat this.date}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                        {{/each}}
+                        
+                    </div>
+                    <a href="/articles/1" class="theme-submit-btn">View More</a>
+                </div>
+            </section>
+{{>footer}}
+<!-- AddToAny BEGIN -->
+<script>
+var a2a_config = a2a_config || {};
+a2a_config.onclick = 1;
+a2a_config.num_services = 5;
+a2a_config.prioritize = [ 'x', 'facebook', 'whatsapp', 'linkedin', 'copy_link' ];
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
+
+<script async src="//www.instagram.com/embed.js"></script>
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+  <script>
+    // Function to remove inline styles
+    function removeInlineStyles() {
+      // Get all elements in the document
+      var allElements = document.getElementsByTagName('*');
+
+      // Iterate through each element
+      for (var i = 0; i < allElements.length; i++) {
+        // Check if the element has a style attribute
+        if (allElements[i].hasAttribute('style')) {
+          // Remove the style attribute
+          allElements[i].removeAttribute('style');
+        }
+      }
+    }
+
+    // Call the function to remove inline styles
+    removeInlineStyles();
+  </script>

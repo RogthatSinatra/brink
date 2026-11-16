@@ -1,0 +1,303 @@
+{{>navbar}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js" integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<link rel="stylesheet" type="text/css" href="/css/flexslider.css">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+<style>
+    @media (min-width: 600px) {
+    .navBarBgTop {
+        background-color: black;
+        box-shadow: none;
+        opacity: 0;
+        transition: opacity 0.25s ease;
+    }
+}
+
+
+.navBarBgTop {
+    top: 0;
+    position: fixed;
+    background-color: #000;
+    opacity: 1;
+    width: 100vw;
+    box-shadow: 0 2px 10px #999999;
+    color: black;
+    z-index: 7500;
+}
+    @font-face{font-family:'Generic G10-FR Slim';src:url(/fonts/GenericG10FRSlim.woff) format('woff');font-weight:400;font-style:normal}@font-face{font-family:'times';src:url(/fonts/TimesNewRomanMT-Cond.woff) format('woff');font-weight:400;font-style:normal}body{background-color:#ab6100;font-family:'Generic G10-FR Slim'}#supportUsBubble{z-index:60000;display:flex}.festivals{padding-top:30px}#festival_hero{height:100dvh;display:flex;justify-content:center;align-items:center;text-align:center;background:url(/events/Events-guide-kampala-2025.jpg) center center / cover no-repeat}h1{color:#000;font-size:32px;-webkit-text-stroke:1px #ab6100;font-family:'Generic G10-FR Slim';text-align:center;text-transform:uppercase;max-width:1000px;margin-left:auto;margin-right:auto;line-height:1;margin-bottom:0;margin-top:56px}.months{background:#000}.months-wrapper{position:sticky;top:56px;z-index:9998;border-top:2px solid #D7FF02;border-bottom:2px solid #D7FF02}.months .swiper-wrapper{list-style:none;text-transform:uppercase;padding:5px 0;margin-bottom:0}.monthHeader{scroll-margin-top:120px;text-align:center;margin-bottom:20px;margin-top:20px;font-size:36px;text-transform:uppercase;color:#fff0;-webkit-text-stroke:2px #000}.months .swiper-wrapper .swiper-slide{text-align:center}.months .swiper-wrapper .swiper-slide a{color:#D0E3E4;-webkit-text-stroke:1px #ab6100;font-size:20px}.swiper-button-next:after,.swiper-button-prev:after{color:#D0E3E4;-webkit-text-stroke:1px #ab6100;font-size:22px!important}.festival-item{padding:0 10px;max-width:800px;margin-left:auto;margin-right:auto;margin-bottom:60px;scroll-margin-top:124px}.festival-item .festival-image>img{max-width:100%;border:3px solid #D7FF02;display:block;object-fit:cover}.festival-item#spotlight{max-width:1000px}.festival-item#spotlight .festival-image>img{border:solid 1px #000;width:100%}.recommends span img{margin-right:10px;display:inline-block;width:20px;position:relative;top:-2px}.months .swiper-wrapper .swiper-slide.swiper-slide-active a{color:#ab6100}.festival-image{margin-bottom:40px}.festival-image .recommends{display:none}.festival-item#spotlight .festival-image{position:relative;border:solid 1px #000}.festival-item#spotlight .festival-image .recommends{display:block;position:absolute;top:0;left:0;width:100%;background:#D7FF02;padding:0 0;text-align:center;border-bottom:solid 1px #000;overflow:hidden}.festival-item#spotlight .festival-image .recommends-bottom{display:block;position:absolute;bottom:0;top:auto;left:0;width:100%;background:#D7FF02;text-align:center;border-top:solid 1px #000;border-bottom:none;overflow:hidden}.festival-item#spotlight .festival-image .recommends span{display:block;color:#ab6100;-webkit-text-stroke:1px #000;font-size:16px;padding:0 5px;position:relative;top:0}.festival_details h2{margin-bottom:0;text-transform:uppercase;font-size:38px;font-family:'Generic G10-FR Slim';margin-bottom:5px;line-height:1;overflow-wrap:break-word;color:#000}.festival_details h3{margin-bottom:0;font-size:20px;margin-top:0;font-family:times;-webkit-text-stroke:1px #000;color:#000}.festival_text p{margin-top:20px;font-size:19px;font-family:times;color:#000;line-height:1.1;}.festival_text p a{text-decoration:underline}span.image_caption{float:left;font-family:'times';margin-top:2px;margin-bottom:5px;font-size:16px;padding-left:2px}.festival-image_wrapper{position:relative}.festival-image_wrapper .supporterLink{position:absolute;top:-25px;right:-10px;display:block;width:100px;z-index:900}.festival-image_wrapper .supporterLink img{max-width:100%;height:auto}#months{pointer-events:none}@media only screen and (min-width:900px){.months .swiper-wrapper .swiper-slide{width:auto!important}.months .swiper-wrapper .swiper-slide a{font-size:20px}.months .swiper-wrapper{display:flex!important;justify-content:center;align-items:center;column-gap:20px}h1{font-size:100px;-webkit-text-stroke:2px #ab6100}.monthHeader{scroll-margin-top:120px}.festival_info{display:flex;column-gap:30px}.festival_info>div{width:50%}.festival_text p{margin-top:0}#festival_hero{background:url(/events/Events-guide-kampala-2025.jpg) center center / cover no-repeat}.festival_details h2{font-size:44px}.festival_details h3{font-size:24px}.festival-item#spotlight .festival-image .recommends span{-webkit-text-stroke:1.5px #000;font-size:20px}.festival-item#spotlight .festival-image .recommends{padding:10px 0}.festival-image_wrapper .supporterLink{width:200px;right:-100px;top:-50px}#months{pointer-events:auto}.monthHeader{font-size:52px}.recommends span img{width:35px}.festival-item#spotlight .festival-image .recommends{padding:10px 0}}#supportUsBubble{background:black!important;border:1px solid #D7FF02;color:#D7FF02}#supportUsClose line{stroke:#D7FF02}#supportUsPopup.bottomRightPopup{background:#000;color:#D7FF02;border:1px solid #D7FF02;width:340px}#popupButton{display:none}
+    
+
+.gettickets{
+	font-size:14px;
+	color:white !important;
+	background-color:black;
+	padding:10px;
+	margin-top:35px !important;
+	line-height:35px;
+	text-align:center;
+	border-radius:35px;
+}
+</style>
+
+<div id="festival-list">
+    <div id="festival_hero">
+        <h1>The Brink Events Guide 2026 [Kampala]</h1>
+    </div>
+    <div class="months-wrapper">
+        <div class="months swiper swiper-initialized swiper-horizontal">
+            <div class="swiper-wrapper" id="months" aria-live="polite">
+                {{#each eventsByYear}}
+                 {{#each months}}
+                <div class="swiper-slide {{#ifCond @index '===' 0}}swiper-slide-active{{/ifCond}}" role="group" aria-label="{{add @index 1}} / {{months.length}}" style="width: 855px;"><a href="#{{month}}{{...year}}">{{month}}</a></div>
+                {{/each}}
+                {{/each}}
+            </div>
+            <div class="swiper-button-prev swiper-button-disabled" tabindex="-1" role="button" aria-label="Previous slide" aria-controls="months" aria-disabled="true"></div>
+            <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide" aria-controls="months" aria-disabled="false"></div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+        </div>
+    </div>
+    <div class="festivals">
+    	{{#each eventsByYear}}
+                 {{#each months}}
+        <div id="{{month}}{{...year}}" class="monthHeader">{{#ifCond month '===' 'December'}}Dirty{{/ifCond}} {{month}}</div>
+{{#each events}}
+{{#if recommend}}
+
+<div class="festival-item" id="spotlight">
+            <div class="festival-image_wrapper">
+                <div class="festival-image">
+                    <div class="recommends marquee3k"><img height="30" src="/images/uotmag-Recommends-Banner-2025-1.svg"></div>
+                    <img src="{{event_poster}}" alt="{{event_name}} image">
+                    <span class="image_caption">© {{store_name}} </span>
+                    {{#if ../../../user}}
+                    <a href="/events/{{_id}}/delete" class="image_caption">Delete</a>
+                    {{/if}}
+                    <div class="recommends recommends-bottom marquee3k"><img height="30" src="/images/uotmag-Recommends-Banner-2025-1.svg"></div>
+                </div>
+            </div>
+            <div class="festival_info">
+                <div class="festival_details">
+                    <h2>{{event_name}}</h2>
+                    <h3>{{event_venue}}, {{country}}</h3>
+                    <h3>{{category_name}}</h3>
+                    <h3>{{formatEventDates start_date end_date}}</h3>
+                </div>
+                <div class="festival_text2"><br/>
+                    <p><span style="font-weight: 400;">
+                    	{{#if (isEventEnded start_date end_date)}}
+  <span class="ended">Event ended</span>
+{{else}}
+                    	<a href="{{#ifCond source '===' 'Mookh'}}https://mookh.com/event/{{slug}}?utm_source=thebrinknews&amp;utm_campaign=events{{/ifCond}}{{#ifCond source '===' 'MTN'}}https://momoticketing.com/event/{{slug}}?utm_source=thebrinknews&amp;utm_campaign=events{{/ifCond}}{{#ifCond source '===' 'UOT'}}{{slug}}{{/ifCond}}" target="_blank" class="gettickets">
+					Get Tickets
+				</a>
+				{{/if}}
+			</span></p>
+                </div>
+            </div>
+        </div>
+{{else}}
+        <div class="festival-item" >
+            <div class="festival-image_wrapper">
+                <div class="festival-image">
+                    <img src="{{event_poster}}" alt="{{event_name}} image">
+                    
+                    {{#if ../../../user}}
+                    <a href="/events/{{_id}}/delete" class="image_caption">Delete</a>
+                    {{else}}
+                    <span class="image_caption">© {{store_name}}</span>
+                    {{/if}}
+                </div>
+            </div>
+            <div class="festival_info">
+                <div class="festival_details">
+                    <h2>{{event_name}}</h2>
+                    <h3>{{event_venue}}, {{country}}</h3>
+                    <h3>{{category_name}}</h3>
+                    <h3>{{formatEventDates start_date end_date}}</h3>
+                </div>
+                <div class="festival_text2"><br/>
+                    
+                	{{#if (isEventEnded start_date end_date)}}
+                
+  <span class="ended">Event ended</span>
+{{else}}
+                   <a href="{{#ifCond source '===' 'Mookh'}}https://mookh.com/event/{{slug}}?utm_source=thebrinknews.com&amp;utm_campaign=events{{/ifCond}}{{#ifCond source '===' 'MTN'}}https://momoticketing.com/event/{{slug}}?utm_source=thebrinknews.com&amp;utm_campaign=events{{/ifCond}}{{#ifCond source '===' 'UOT'}}{{slug}}{{/ifCond}}" target="_blank" class="gettickets">
+					Get Tickets
+				</a>
+				{{/if}}
+                </div>
+            </div>
+        </div>
+        {{/if}}
+
+
+        {{/each}}
+        {{/each}}
+        {{/each}}<br/><br/><br/><br/><br/>
+    </div>
+</div>
+
+<section class="editor-choice-two-area mb-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="section-title">
+                                <h2 class="title-block">
+                                   Recommended
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                         
+                            <article class="post-block-style-wrapper post-block-template-four">
+                                <div class="post-block-style-inner post-block-list-style-inner">
+                                    <div class="post-block-content-wrap">
+                                        <div class="post-item-title">
+                                            <h2 class="post-title">
+                                                <a href="/miss-uganda">Miss Uganda List</a>
+                                            </h2>
+                                        </div>
+                                        <div class="post-excerpt-box">
+                                            <p>Explore the history of Miss Uganda since independence and meet the former beauty queens who shaped Uganda’s culture and legacy.</p>
+                                        </div>
+                                        <div class="post-bottom-meta-list">
+                                            <div class="post-meta-author-box">
+                                                By <a href="/miss-uganda">The Brink news</a>
+                                            </div>
+                                            <div class="post-meta-date-box">
+                                               {{dateFormat this.date}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="post-block-media-wrap">
+                                        <a href="/miss-uganda">
+                                        <img class="lazy" data-src="/images/miss-uganda-queens/Trivia-Elle-Muhoza.webp" alt="Miss Uganda">
+                                        </a>
+                                    </div>
+                                </div>
+                            </article>
+                     
+                           
+                        </div>
+                    </div>
+                      
+          
+                </div>
+            </section>
+<script src="/js/swiper-bundle.min.js"></script>
+                <script>
+                const swiper = new Swiper('.swiper', {
+                    navigation: {
+                        allowTouchMove: false,
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                    breakpoints: {
+                        900: {
+                            enabled: false
+                        }
+                    }
+
+                });
+
+                swiper.on('slideChange', function() {
+                    const EL_currentSlide = this.slides[this.activeIndex].children[0].href;
+                    if (history.pushState) {
+                        history.pushState(null, null, EL_currentSlide);
+                    } else {
+                        location.hash = EL_currentSlide;
+                    }
+                });
+
+                swiper.on('navigationNext', function() {
+                    const EL_currentSlide = this.slides[this.activeIndex].children[0].href;
+                    window.location.href = EL_currentSlide;
+                });
+
+                swiper.on('navigationPrev', function() {
+                    const EL_currentSlide = this.slides[this.activeIndex].children[0].href;
+                    window.location.href = EL_currentSlide;
+                });
+
+                var btns = document.getElementsByClassName("swiper-slide");
+
+                // Loop through the buttons and add the active class to the current/clicked button
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function() {
+                        var current = document.getElementsByClassName("swiper-slide-active");
+                        current[0].className = current[0].className.replace(" swiper-slide-active", "");
+                        this.className += " swiper-slide-active";
+                    });
+                }
+
+                let observerOptions = {
+                    rootMargin: '0px 0px -80%',
+                    threshold: 0
+                }
+
+                var observer = new IntersectionObserver(observerCallback, observerOptions);
+
+                function observerCallback(entries, observer) {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            var current = document.getElementsByClassName("swiper-slide-active");
+                            current[0].className = current[0].className.replace(" swiper-slide-active", "");
+                            var anchor = entry.target.id;
+                            var months = document.getElementById("months");
+                            var activeMonth = months.querySelector("a[href='#" + anchor + "']");
+                            activeMonth.parentElement.classList.add("swiper-slide-active");
+
+                            var pos = Array.prototype.slice.call(document.getElementsByClassName('swiper-slide'))
+                                .indexOf(document.getElementsByClassName('swiper-slide-active')[0]);
+
+                            if (history.pushState) {
+                                history.pushState(null, null, activeMonth);
+                            } else {
+                                location.hash = activeMonth;
+                            }
+
+
+
+                            swiper.slideTo(pos);
+                        }
+                    });
+                };
+
+                let target = '.monthHeader';
+                document.querySelectorAll(target).forEach((i) => {
+                    if (i) {
+                        observer.observe(i);
+                    }
+                });
+
+                window.onload = function() {
+
+                    const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                    const d = new Date();
+                    let month = months[d.getMonth()];
+                    let year = d.getFullYear();
+                    let anchor = month + year;
+                    // console.log(anchor);
+                    document.getElementById(anchor).scrollIntoView();
+                };
+
+
+
+                const myTimeout = setTimeout(myGreeting, 2000);
+
+                function myGreeting() {
+                    document.getElementById("supportUsBubble").click();
+                }
+                </script>
+                <!-- <style>
+                    .festival-item .festival-image > img {
+aspect-ratio: 16/9;
+object-fit: cover;
+}			</style> -->
+                <!-- end container -->
+                <!-- flexslider -->
+                <script src="/js/jquery.flexslider.js" type="text/javascript"></script>
+                <script src="/js/slick.min.js"></script>
