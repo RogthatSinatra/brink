@@ -1,18 +1,20 @@
+if (!process.env.MONGODB_URI) {
+    require('dotenv').config();
+}
+const dns = require('dns');
+try {
+    dns.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4']);
+} catch (e) {}
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 var Schema = mongoose.Schema;
-if(process.env.MONGODB_URI) {
-    mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true,  useUnifiedTopology: true}).then(
-    () => { console.log('Connected')},
-  err => { console.log(err)});
-}else {
-    mongoose.connect('a string of uri',{ useCreateIndex: true, useNewUrlParser: true }, function(err){ 
-        if(err){
-            console.log(err);
-        }else {
-            console.log('Connected to Atlas');
-        }
-    });
+if (process.env.MONGODB_URI) {
+    mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
+        .then(() => { console.log('Connected to MongoDB via Mongoose'); })
+        .catch(err => { console.error('MongoDB connection error:', err); });
+} else {
+    console.error('MONGODB_URI is not defined in environment variables');
 }
 var db = mongoose.connection;
 var UserSchema =  mongoose.Schema({
@@ -72,7 +74,11 @@ module.exports.getUserByUsername = function(username, callback){
 
 }
 module.exports.comparePassword = function(candidatePassword, hash, callback){
+    if (!hash) {
+        return callback(null, false);
+    }
     bcrypt.compare(candidatePassword, hash, function(err, isMatch){
+        if (err) return callback(err);
         callback(null, isMatch);
-    })
-}
+    });
+};

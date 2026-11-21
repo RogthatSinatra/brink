@@ -100,7 +100,7 @@ passport.deserializeUser(function (id, done) {
 passport.use(
     new LocalStrategy(function (username, password, done) {
         User.getUserByUsername(username, (err, user) => {
-            if (err) throw err;
+            if (err) return done(err);
             if (!user) {
                 return done(null, false, { message: "Unknown User" });
             }
@@ -130,9 +130,15 @@ router.post("/login",
         failureRedirect: "/users/login",
         failureFlash: "Invalid username or password",
     }),
-    function (req, res) {
-        req.user.logged = moment(new Date()).format()
-        req.user.save()
+    async function (req, res) {
+        try {
+            if (req.user) {
+                req.user.logged = moment(new Date()).format();
+                await req.user.save();
+            }
+        } catch (err) {
+            console.error("Error updating user login timestamp:", err);
+        }
         req.flash("success", "You are now logged in");
         res.redirect("/admin");
     }

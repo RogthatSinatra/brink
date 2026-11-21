@@ -1,3 +1,14 @@
+require('dotenv').config();
+const dns = require('dns');
+if (dns.setDefaultResultOrder) {
+    dns.setDefaultResultOrder('ipv4first');
+}
+try {
+    dns.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4']);
+} catch (e) {
+    console.warn('Could not set custom DNS servers:', e);
+}
+
 const express = require('express');
 const hbs = require('hbs');
 const expressHbs = require('express-handlebars');
@@ -35,6 +46,7 @@ var categories = require('./routes/categories');
 var events = require('./routes/events');
 
 var app = express();
+app.enable('trust proxy');
 
 app.locals.moment = require('moment');
 
@@ -60,15 +72,23 @@ app.use(function(req, res, next) {
 });
 
 // Handle Sessions
-// app.use(cookieSession({
-//     secret: 'secret',
-//     saveUninitialized: true,
-//     resave: true
-// }));
 app.use(cookieSession({
     name: 'session',
-    keys: ['key1', 'key2']
-}))
+    keys: [process.env.SESSION_SECRET || 'brink-session-key-1', 'brink-session-key-2'],
+    maxAge: 24 * 60 * 60 * 1000 // 24 hours
+}));
+
+// Compatibility shim for Passport 0.6+ with cookie-session
+app.use(function(req, res, next) {
+    if (req.session && !req.session.regenerate) {
+        req.session.regenerate = (cb) => { cb(); };
+    }
+    if (req.session && !req.session.save) {
+        req.session.save = (cb) => { cb(); };
+    }
+    next();
+});
+
 // Passport 
 app.use(passport.initialize());
 app.use(passport.session());
@@ -93,7 +113,6 @@ app.use(expressValidator({
 
 // Express messages for flash notification rendering
 app.use(flash());
-app.use(require('connect-flash')());
 app.use(function(req, res, next) {
     res.locals.messages = require('express-messages')(req, res);
     next();
