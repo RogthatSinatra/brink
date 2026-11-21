@@ -2,6 +2,9 @@ if (!process.env.MONGODB_URI) {
     require('dotenv').config();
 }
 const dns = require('dns');
+if (dns.setDefaultResultOrder) {
+    dns.setDefaultResultOrder('ipv4first');
+}
 try {
     dns.setServers(['8.8.8.8', '1.1.1.1', '8.8.4.4']);
 } catch (e) {}
